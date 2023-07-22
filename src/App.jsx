@@ -1,7 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/shared/Layout'
-import ClientCounselorProfile from './pages/client/ClientCounselorProfile'
+import ClientCounsellorProfile from './pages/client/ClientCounsellorProfile'
 import CounsellorProfile from './pages/counsellor/CounsellorProfile'
+import Blogs from './pages/Blogs'
+import PostBlog from './pages/PostBlog'
+
+
 
 function App() {
     return (
@@ -9,10 +13,15 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route path="counsellorProfile" element={<CounsellorProfile />} />
-                    <Route path="clientcounselorprofile" element={<ClientCounselorProfile />} />
+                    <Route path="clientcounsellorprofile" element={<ClientCounsellorProfile />} />
+                    <Route path="blogs" element={<Blogs />} />
+                    <Route path="/postblog" element={<PostBlog />} />
+
+
+
                 </Route>
                 <Route path="login" element={<div>this is login page</div>}/>
-            </Routes>
+                </Routes>
         </Router>
     )
 }

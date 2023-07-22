@@ -11,13 +11,17 @@ const people = [
   },
 ]
 
-export default function ClientCounselorProfile() {
+export default function ClientCounsellorProfile() {
   
   return (
     <>
-      <div>
-        <ProfileDetails />
-        <ProfileCard />
+      <div className='flex grid flex-col w-full gap-4 md:grid-cols-4'>
+        <div className='overflow-y-auto bg-white rounded-xl'>
+          <ProfileCard/>
+        </div>
+        <div className='overflow-hidden bg-white md:col-span-3 rounded-xl'>
+          <ProfileDetails />
+        </div>
       </div>
     </>
   )
