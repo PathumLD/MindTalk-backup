@@ -6,6 +6,7 @@ import IconComponent from '../../components/IconComponent';
 const CounsellorProfile = () => {
   return (
     <>
+      
       <div className="flex grid flex-col w-full gap-4 md:grid-cols-4">
 
       <div className="bg-white rounded-xl md:col-span-3 ">
@@ -14,7 +15,7 @@ const CounsellorProfile = () => {
           <form>
             <div className="">
 
-              <div className="pb-4 ">
+              <div className="pb-2 ">
                 <h1 className="ml-8 text-2xl font-bold text-gray-900">Personal Information</h1>
 
                 <div className="grid grid-cols-1 mt-10 gap-x-6 gap-y-6 sm:grid-cols-6">

@@ -8,10 +8,10 @@ export default function Header() {
     const navigate = useNavigate()
     
   return (
-    <div className='bg-white w-full top-0 z-0'>
+    <div className='top-0 z-0 w-full bg-white'>
         <div className='sm:flex md:flex float-right items-center py-4 pr-2 h-[64px] min-h-[64px]'>
     
-            <div className='flex float-right items-center gap-2 mr-2'>
+            <div className='flex items-center float-right gap-2 mr-2'>
             <Popover className="relative">
                 {({ open }) => (
                     <>
@@ -34,8 +34,8 @@ export default function Header() {
                             >
                             <Popover.Panel className="absolute right-0 z-10 mt-2.5 w-80">
                                 <div className='bg-white rounded-sm shadow-md ring-1 ring-black ring-opacity-5 px-2 py-2.5'>
-                                    <strong className='text-gray-700 font-medium'>Notifications</strong>
-                                    <div className='mt-2 py-1 text-sm'>
+                                    <strong className='font-medium text-gray-700'>Notifications</strong>
+                                    <div className='py-1 mt-2 text-sm'>
                                         This is the notification panel
                                     </div>
                                 </div>
@@ -46,9 +46,9 @@ export default function Header() {
             </Popover>
             <Menu as="div" className="relative">
                 <div>
-                    <Menu.Button className="ml-2 inline-flex rounded-full focus:outline-none focus:ring-2 focus:ring-blue-700">
+                    <Menu.Button className="inline-flex ml-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-700">
                         <span className='sr-only'>open user menu</span>
-                        <div className='h-10 w-10 rounded-full bg-sky-500 bg-cover bg-no-repeat bg-center' 
+                        <div className='w-10 h-10 bg-center bg-no-repeat bg-cover rounded-full bg-sky-500' 
                                 style={{background: 'url("https://source.unsplash.com/50x50?face")'}}>
                             <span className='sr-only'> Hugh jackman</span>
                         </div>
@@ -63,14 +63,14 @@ export default function Header() {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                     >
-                    <Menu.Items className="origin-top-right z-10 absolute right-0 mt-2 w-48 rounded-sm shadow-md p-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute right-0 z-10 w-48 p-1 mt-2 origin-top-right bg-white rounded-sm shadow-md ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
                             {({ active }) => (
                                 <div className={classNames(
                                     active && 'bg-gray-100',
                                     'text-gray-700 focus:bg-gray-200 cursor-pointer rounded-sm px-4 py-2'
                                     )}
-                                    onClick={() => navigate('/clientprofile')}>
+                                    onClick={() => navigate('/counsellorprofile')}>
                                     Your Profile 
                                 </div>
                             )}

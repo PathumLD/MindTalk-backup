@@ -1,8 +1,9 @@
-import React from 'react';
+import React from 'react'
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-const Blogs = () => {
-  // Define a sample 'posts' array
+
+const VerifyBlogs = () => {
+
   const posts = [
     {
       id: 1,
@@ -72,6 +73,7 @@ const Blogs = () => {
 
   return (
     <>
+          
       <div className=' rounded-xl'>
         <div className='bg-white rounded-2xl'>
           <div className="py-4 rounded-2xl sm:py-6 bg-gradient-to-br from-blue-200 to-green-50">
@@ -152,16 +154,23 @@ const Blogs = () => {
                     </div>
                   </div>
 
+                    <div className="flex gap-4 p-4 items-right">
+                      <button className="px-4 py-2 mr-2 font-bold text-white bg-green-500 rounded-full hover:bg-green-600">
+                        Verify
+                      </button>
+                      <button className="px-4 py-2 font-bold text-white bg-red-500 rounded-full hover:bg-red-600">
+                        Reject
+                      </button>
+                    </div>
                 </article>
               ))}
             </div>
           
         </div>
       </div>
-
       
     </>
-  );
-};
+  )
+}
 
-export default Blogs;
+export default VerifyBlogs
